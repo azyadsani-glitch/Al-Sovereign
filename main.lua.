@@ -1,0 +1,20 @@
+-- [[ AL AI SOVEREIGN UNIVERSAL MENU ]] --
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("AL AI SOVEREIGN", "Midnight")
+
+-- TAB UTAMA
+local Tab1 = Window:NewTab("Player")
+local Section1 = Tab1:NewSection("Movement")
+
+Section1:NewSlider("Speed", "Lari kenceng", 500, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section1:NewSlider("Jump", "Lompat tinggi", 500, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+-- TAB INFO
+local Tab2 = Window:NewTab("Credits")
+local Section2 = Tab2:NewSection("Owner: Al AI")
+Section2:NewLabel("Server Web Aktif!")
